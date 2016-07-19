@@ -1,0 +1,27 @@
+Listed below are the numbers of pixels identified as -1 by the Robot class getRGB built in method. For a given number displayed in an image there may be multiple values associated with it. Each set of values was obtained by examining a static image.  
+
+Zero - 167 191 131 111 | 0 m e t
+ZeroOne - 172 15 108 202 | 0 . 1 m
+NegZeroTwo - 24 167 18 131 | - 0 . 2
+ZeroThree - 172 15 129 202 | 0 . 3 m
+ZeroFour - 24 167 18 148 | - 0 . 4
+ZeroFive - 172 15 140 202 | 0 . 5 m
+ZeroSix - 172 15 153 202 | 0 . 6 m
+NegZeroSeven - 24 167 18 103 | - 0 . 7
+ZeroEight - 172 15 178 202 | 0 . 8 m
+ZeroNine - 172 15 159 202 | 0 . 9 m
+
+Ten - 108 172 216 132 | 1 0 m e
+TenTwo - 112 179 15 130 | 1 0 . 2
+
+TwoFive - 131 15 140 202 | 2 . 5 m
+
+OneOne - 92 15 108 202 | 1 . 1 m
+TwoTwo - 131 15 132 202 | 2 . 2 m
+ThreeThree - 133 15 129 202 | 3 . 3 m
+FourFour - 148 15 147 202 | 4 . 4 m
+FiveFive - 140 15 140 202 | 5 . 5 m
+SixSix - 153 15 154 202 | 6 . 6 m
+SevenSeven - 103 15 106 202 | 7 . 7 m  
+EightEight - 176 15 178 202 | 8 . 8 m
+NineNine - 158 15 159 202 | 9 . 9 m 
