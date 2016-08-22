@@ -29,8 +29,8 @@ public class Distance_Reader {
         x1 = 860;
         x2 = 1022;
 
-        y1 = 98;
-        y2 = 129;
+        y1 = 243;
+        y2 = 274;
         // y1 = 693;
         // y2 = 722;
 
@@ -38,6 +38,7 @@ public class Distance_Reader {
 
         //printMatrix(x1, x2, y1, y2, toPrint);
         moveMouse(x1, x2, y1, y2);
+
 
     }
 

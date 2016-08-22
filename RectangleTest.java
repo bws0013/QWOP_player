@@ -28,7 +28,8 @@ public class RectangleTest {
 
     public static int[] getNums() {
         int x = 860;
-        int y = 98;
+        //int y = 98;
+        int y = 243;
 
         int[] ret = new int[4];
 
@@ -40,50 +41,56 @@ public class RectangleTest {
 
             bi = rob.createScreenCapture(rec);
 
+            // If yellow, then you are dead.
+            Color pixel = rob.getPixelColor(1120, 360);
+            //System.out.println(pixel.getRGB());
+            if(pixel.getRGB() == -256) {
+                System.out.print("dead ");
+                //System.exit(0);
+            }
+
+            //System.out.println(bi.getWidth() + " " + bi.getHeight());
+
+            int maxNums = 0;
+            int totalWhite = 0;
+
+            boolean broken = false;
+
+            for(int i = 0; i < 162; i++) {
+
+                boolean lineCount = false;
+
+                for(int j = 0; j < 31; j++) {
+                    int rVal = ((bi.getRGB(i, j)));
+                    //System.out.print(((rVal % 256)) + " ");
+                    if(rVal == -1) {
+                        //System.out.print(1 + " ");
+                        totalWhite++;
+                        lineCount = true;
+                    } else {
+                        //System.out.print(0 + " ");
+                    }
+                }
+
+                if(lineCount == true) {
+                    broken = true;
+                }
+                if(broken == true && lineCount == false) {
+                    broken = false;
+                    //System.out.print(totalWhite + " ");
+                    ret[maxNums] = totalWhite;
+                    totalWhite = 0;
+                    maxNums++;
+                    if(maxNums == 4) {
+                        break;
+                    }
+                }
+                //System.out.println();
+            }
 
         } catch (java.awt.AWTException awt) {
             System.out.println("DangerZone");
         }
-
-        //System.out.println(bi.getWidth() + " " + bi.getHeight());
-
-        int maxNums = 0;
-        int totalWhite = 0;
-
-        boolean broken = false;
-
-        for(int i = 0; i < 162; i++) {
-
-            boolean lineCount = false;
-
-            for(int j = 0; j < 31; j++) {
-                int rVal = ((bi.getRGB(i, j)));
-                //System.out.print(((rVal % 256)) + " ");
-                if(rVal == -1) {
-                    //System.out.print(1 + " ");
-                    totalWhite++;
-                    lineCount = true;
-                } else {
-                    //System.out.print(0 + " ");
-                }
-            }
-
-            if(lineCount == true) {
-                broken = true;
-            }
-            if(broken == true && lineCount == false) {
-                broken = false;
-                //System.out.print(totalWhite + " ");
-                ret[maxNums] = totalWhite;
-                totalWhite = 0;
-                maxNums++;
-                if(maxNums == 4) {
-                    break;
-                }
-            }
-            //System.out.println();
-        }
-
         return ret;
     }
 

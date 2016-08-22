@@ -17,6 +17,24 @@ public class SwitchCase {
         for(int i = 0; i < ret.length; i++) {
             System.out.print(ret[i] + " ");
         }
+        System.out.println(getNumOnly(ret));
+    }
+
+    // Returns a double of the distance traveled
+    public static double getNumOnly(char arr[]) {
+        double ret = 0;
+        String fakeNum = "";
+
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == 'm') {
+                break;
+            } else {
+                fakeNum += arr[i];
+            }
+        }
+        ret = Double.parseDouble(fakeNum);
+
+        return ret;
     }
 
     // The number of "white" values of each number are passed in.
@@ -32,6 +50,7 @@ public class SwitchCase {
                     break;
                 case 92:
                 case 108:
+                case 112:
                     ret[i] = '1';
                     break;
                 case 131:
@@ -69,6 +88,7 @@ public class SwitchCase {
                     ret[i] = '-';
                     break;
                 case 15:
+                case 18:
                     ret[i] = '.';
                     break;
                 case 191:
